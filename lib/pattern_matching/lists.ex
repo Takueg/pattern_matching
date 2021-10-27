@@ -26,9 +26,7 @@ defmodule PatternMatching.Lists do
   def return_first_item([head | _tail]), do: head
   def return_first_item([]), do: :error
 
-  def starts_with_1?(_list) do
-
-  end
+  def starts_with_1?([1 | _tail]), do: true
 
   def sum_pair(_list) do
 
