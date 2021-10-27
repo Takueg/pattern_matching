@@ -23,10 +23,8 @@ defmodule PatternMatching.Lists do
     length(list) >= 1
   end
 
-  def return_first_item(list) do
-    [head | _tail] = list
-    head
-  end
+  def return_first_item([head | _tail]), do: head
+  def return_first_item([]), do: :error
 
   def starts_with_1?(_list) do
 
