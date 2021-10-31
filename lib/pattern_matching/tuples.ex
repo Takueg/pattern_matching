@@ -11,9 +11,7 @@ defmodule PatternMatching.Tuples do
   Fix or complete the code to make the tests pass.
   """
 
-  def day_from_date(_erl_date) do
-
-  end
+  def day_from_date({_a, _b, c}), do: c
 
   def has_three_elements?(_tuple) do
 
