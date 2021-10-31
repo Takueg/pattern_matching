@@ -22,7 +22,7 @@ defmodule PatternMatching.Tuples do
   def major_us_holiday(_other), do: "Uh..."
 
   def greet_user({:ok, username}), do: "Hello #{username}!"
-  def greet_user({:error, reason}), do: "#{reason}"
+  def greet_user({:error, _reason}), do: "Cannot greet"
 
   def add_to_result(_tuple), do: nil
 
