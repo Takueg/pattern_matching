@@ -13,9 +13,8 @@ defmodule PatternMatching.Tuples do
 
   def day_from_date({_a, _b, c}), do: c
 
-  def has_three_elements?(_tuple) do
-
-  end
+  def has_three_elements?({_a, _b, _c}), do: true
+  def has_three_elements?(_other), do: false
 
   def major_us_holiday(_erl_date) do
 
