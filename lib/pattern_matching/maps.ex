@@ -11,9 +11,7 @@ defmodule PatternMatching.Maps do
   Fix or complete the code to make the tests pass.
   """
 
-  def return_name(_value) do
-
-  end
+  def return_name(%{name: name}), do: name
 
   def has_sides?(_value) do
 
