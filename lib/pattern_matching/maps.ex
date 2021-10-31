@@ -13,9 +13,8 @@ defmodule PatternMatching.Maps do
 
   def return_name(%{name: name}), do: name
 
-  def has_sides?(_value) do
-
-  end
+  def has_sides?(%{sides: _value}), do: true
+  def has_sides?(_other), do: false
 
   def net_change(_value) do
 
