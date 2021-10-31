@@ -16,9 +16,11 @@ defmodule PatternMatching.Maps do
   def has_sides?(%{sides: _value}), do: true
   def has_sides?(_other), do: false
 
-  def net_change(_value) do
-
+  def net_change(%{ending_balance: ending, initial_balance: initial} = _customer) do
+    {:ok, ending - initial}
   end
+
+  def net_change(_other), do: {:error, "Missing balance information"}
 
   def classify_response(_response) do
 
