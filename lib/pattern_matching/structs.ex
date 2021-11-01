@@ -12,9 +12,8 @@ defmodule PatternMatching.Structs do
   """
   alias PatternMatching.{Customer, User}
 
-  def get_name(_value) do
-
-  end
+  def get_name(%{name: name}), do: {:ok, name}
+  def get_name(_other), do: {:error, "Doesn't have a name"}
 
   def create_greeting(_value) do
 
