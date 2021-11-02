@@ -28,8 +28,9 @@ defmodule PatternMatching.Structs do
   end
 
 
-  def deactivate_user(_user) do
-
+  def deactivate_user(%User{} = user) do
+    { :ok , %{user | active: false} }
   end
 
+  def deactivate_user(_other), do: {:error, "Not a User"}
 end
