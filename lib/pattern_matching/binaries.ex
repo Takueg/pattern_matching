@@ -21,9 +21,15 @@ defmodule PatternMatching.Binaries do
 
   def identify_command(_other), do: {:error, "Unrecognized command"}
 
-  def format_phone(_value) do
-
+  def format_phone(<< front::binary-size(3), middle::binary-size(3), back::binary-size(4) >>) do
+    "(#{front}) #{middle}-#{back}"
   end
+
+  def format_phone( << front::binary-size(3), middle::binary-size(4) >>) do
+    "#{front}-#{middle}"
+  end
+
+  def format_phone(input), do: input
 
   def image_type(_value) do
 
